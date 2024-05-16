@@ -79,15 +79,15 @@ Section css
   --box-three: #523CA4;
   --text-pra: #BBBBBB;
   --bg: #160E31;
-  --white: #fff;
+  --white: #000000;
   --hover-bg: #4b1093;
   --Breadcumnd: #271A51;
   --icon-bg: #41385A;
   --lightwaight: #76DC00;
-  --box-two: #240945;
+  --box-two: #000000;/* #240945;*/
   --border: #401A6D;
   --form-bg: #342669;
-  --footer: #240945;
+  --footer: #000000;/* #240945;*/
   --pragraph: #7F8698;
   --prev: #41385A;
   --next: #514477;
