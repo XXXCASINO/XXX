@@ -1,0 +1,166 @@
+.banner-section{
+    overflow: hidden;
+}
+.banner-wrapper{
+    overflow: hidden;
+    .owl-nav{
+        button.owl-next{
+            position: absolute;
+            right: 10px;
+            bottom: 50%;
+            @include radius;
+            transition: all 0.3s;
+            &:hover{
+                @include gradian-50;
+            }
+        }
+        button.owl-prev{
+            position: absolute;
+            left: 10px;
+            bottom: 50%;
+            @include radius;
+            transition: all 0.3s;
+            &:hover{
+                @include gradian-50;
+            }
+        }
+    }
+    .owl-dots{
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translate(-50%);
+        button.owl-dot{
+           span{
+            background-color: #BDC2D1;
+            transition: all 0.6s
+           }
+           &.active{
+            span{
+                @include gradian-bg;
+                width: 26px;
+            }
+           }
+        }
+    }
+}
+.banner-items{
+    background: url(../../assets/img/banner/banner-bg.png);
+    background-position: top center;
+    background-size: cover;
+    position: relative;
+    height: 550px;
+    .banner-content{
+        padding: 120px 60px 110px;
+        position: relative;
+        z-index: 1;
+        max-width: 700px;
+        h1{
+            margin-bottom: 25px;
+        }
+        h3{
+            font-weight: 700;
+        }
+        h4{
+            font-weight: 700;
+        }
+        .cmn--grp{
+            margin-top: 34px;
+        }
+    }
+    .banner-shape{
+        max-width: 750px;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        img{
+            @include imgw;
+        }
+        @media screen and (max-width: 1399px){
+            opacity: 0.3;
+        }
+    }
+    .banner-shape2{
+        max-width: 667px;
+        height: 500px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        img{
+            @include imgw;
+        }
+        @media screen and (max-width: 1399px){
+            opacity: 0.3;
+        }
+    }
+}
+//Breadcumnd Banner
+.breadcumnd-content{
+    background: var(--Breadcumnd);
+    padding: 34px 38px 30px;
+    ul{
+        @include flex;
+        align-items: center;
+        li{
+            &:not(:last-child){
+                margin-right: 20px;
+            }
+            font-size: 18px;
+        }
+    }
+}
+
+
+
+@media (min-width: 1200px) and (max-width: 1399px){
+    .banner-items{
+        height: 450px;
+        .banner-content{
+            padding: 70px 60px 110px;
+        }
+    }
+    .table-wrapper{
+        table{
+            tr{
+                td{
+                    padding: 15px 10px 20px !important;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 767px){
+    .banner-wrapper{
+        .owl-nav{
+            display: none;
+        }
+    }
+    .banner-items{
+        height: 450px;
+        .banner-content{
+            padding: 70px 0px 80px;
+        }
+    }
+}
+@media screen and (max-width: 575px){
+    .banner-items{
+        height: 370px;
+        .banner-content{
+            padding: 60px 0px 90px;
+            .cmn--grp{
+                gap: 10px;
+                margin-top: 25px;
+                .cmn--btn{
+                    padding: 9px 17px 10px;
+                }
+                .border-btn{
+                    padding: 9px 17px 10px;
+                }
+            }
+        }
+    }
+    .banner-wrapper .owl-dots {
+        bottom: 2px;
+    }
+}

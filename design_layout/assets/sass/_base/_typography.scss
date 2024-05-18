@@ -1,0 +1,258 @@
+body {
+	color: var(--white);
+	padding: 0;
+	margin: 0;
+	background: var(--section-bg);
+	overflow-x: auto;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--white);
+	font-family: 'Inter', sans-serif;
+}
+
+h1 {
+	font-size: 49px;
+	font-weight: 700;
+	line-height: 60.8px;
+	font-family: 'Inter', sans-serif;
+}
+
+h2 {
+	font-weight: 700;
+	font-size: 39px;
+	line-height: 60.1px;
+	margin-top: -13px;	
+	font-family: 'Inter', sans-serif;
+}
+
+h3 {
+	font-size: 31px;
+	line-height: 40px;
+	font-family: 'Inter', sans-serif;
+}
+
+h4 {
+	font-size: 25px;
+	line-height: 31.2px;
+	margin-top: -15px;
+	font-family: 'Inter', sans-serif;
+}
+
+h5 {
+	font-size: 18px;
+	line-height: 24.2px;
+	margin-top: -3px;
+	font-family: 'Inter', sans-serif;
+}
+
+h6 {
+	font-size: 16px;
+	font-weight: 500;
+	margin-top: -1px;
+	line-height: 19.2px;
+	font-family: 'Inter', sans-serif;
+}
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	margin: 0;
+	color: var(--white);
+	font-family: 'Inter', sans-serif;
+}
+a:hover {
+	text-decoration: none;
+	color: var(--white);
+}
+input:focus{
+	color: var(--white);
+}
+input{
+	color: var(--white);
+}
+p {
+	font-size: 18px;
+	line-height: 1.5;
+	margin-bottom: 0;
+	color: var(--pragraph-color);
+	font-family: 'Inter', sans-serif;
+}
+.pt-120 {
+	padding-top: 120px;
+}
+.pb-120 {
+	padding-bottom: 120px;
+}
+.pt-80 {
+	padding-top: 80px;
+}
+.pb-80 {
+	padding-bottom: 80px;
+}
+.pt-60 {
+	padding-top: 60px;
+}
+.pb-60 {
+	padding-bottom: 60px;
+}
+.mb-30-none{
+	margin-bottom: -25px;
+}
+.mb-30{
+	margin-bottom: 25px;
+}
+/*-Responsive-*/
+/*-Responsive-*/
+@media screen and (max-width: 991px) {
+	.pt-120 {
+		padding-top: 80px;
+	}
+	.pb-120 {
+		padding-bottom: 80px;
+	}
+	.pt-80 {
+		padding-top: 60px;
+	}
+	.pb-80 {
+		padding-bottom: 60px;
+	}
+}
+@media screen and (max-width: 767px) {
+	.pt-120 {
+		padding-top: 70px;
+	}
+	.pb-120 {
+		padding-bottom: 70px;
+	}
+}
+@media screen and (max-width: 575px) {
+	.pt-120 {
+		padding-top: 60px;
+	}
+	.pb-120 {
+		padding-bottom: 60px;
+	}
+	.pt-80 {
+		padding-top: 60px;
+	}
+	.pb-80 {
+		padding-bottom: 60px;
+	}
+}
+//page scroll bar add
+::-webkit-scrollbar {
+	width: 0px;
+	height: 0px;
+}
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px var(--box-bg); 
+	border-radius: 5px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: var(--primary-color); 
+	border-radius: 10px;
+  }
+//page scroll bar add
+/*-Responsive-*/
+/*-Responsive-*/
+.text-base {
+	background: linear-gradient(180deg, #FFC876 -1.75%, #FF6E04 100.23%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;
+}
+.text-base-2 {
+	color: var(--secoundary-color);
+}
+.theme{
+	color: var(--theme-one);
+}
+.title-white {
+	color: var(--white);
+}
+.section-bg {
+	background: var(--section-bg);
+}
+.section-bg-two {
+	background: var(--section-bg-two);
+}
+.bg-white {
+	background: var(--white-color);
+}
+.center {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.twitter{
+	background: var(--secoundary-color) !important;
+}
+.twitch{
+	background: rgb(110, 60, 210) !important;
+}
+.youtube{
+	background: rgb(172, 46, 46) !important;
+}
+.insta{
+	background: rgb(207, 93, 93) !important;
+}
+.lind{
+	background: rgb(78 131 228) !important;
+}
+.face{
+	background: rgb(27, 114, 244) !important;
+}
+
+/*--Section Header Start--*/
+/*--Section Header Start--*/
+.section-wrapper{
+	@include flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 30px;
+	.left-title{
+		margin: 0;
+		padding: 0;
+		.icon{
+			margin-right: 10px;
+		}
+		.text{
+			padding-left: 5px;
+			font-weight: 700;
+		}
+		.shortby{
+			color: var(--white);
+			font-size: 16px;
+			padding-left: 10px;
+		}
+	}
+	.border-btn{
+		padding: 9px 19px 9px;
+		&::before{
+			background-color: var(--body);
+			transition: all 0.5s;
+		}
+	}
+	.cmn--btn{
+		padding: 5px 19px 7px;
+	}
+}
+.live-text{
+	color: #BBBBBB;
+	font-weight: 700;
+}
+/*--Section Header End--*/
+/*--Section Header End--*/

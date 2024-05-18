@@ -1,4 +1,4 @@
-const webScokectURL = "wss://a8r.evo-games.com/public/baccarat/player/game/o4kylkahpwqqy57w/socket?messageFormat=json&instance=nili6x-r5xlzancmx5ffcl7-qfg5qzdjx7pinrpp&tableConfig=qfg5qzdjx7pinrpp&EVOSESSIONID=r5xlzancmx5ffcl7r57lajrun43ac6lkec1828490b1c30711eca5d08704171a8970c8ea0875b4ca7&client_version=6.20240514.70234.41651-9c917fdf36"
+const webScokectURL = "wss://a8r.evo-games.com/public/baccarat/player/game/o4kylkahpwqqy57w/socket?messageFormat=json&instance=3wsyyu-r5xlzancmx5ffcl7-qfg5qzdjx7pinrpp&tableConfig=qfg5qzdjx7pinrpp&EVOSESSIONID=r5xlzancmx5ffcl7r6gsacvwn43px65sfd30f4a19ea780b0722d8c35cfa7c8aafd1f5bfc20231c42&client_version=6.20240516.72337.41698-8d94a605b7"
 
 const WebSocket = require('ws');
 
