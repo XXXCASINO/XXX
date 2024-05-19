@@ -1,11 +1,23 @@
-// src/Dashboard.js
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import { FaHome, FaGift, FaTrophy, FaUsers, FaShoppingCart, FaGamepad, FaHeart, FaHistory, FaDice, FaDiceD20, FaQuestionCircle, FaSignInAlt, FaUserPlus } from 'react-icons/fa';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const App = () => {
+  const [userName, setUserName] = useState('');
+
+  useEffect(() => {
+    fetch('https://api-xxx.vercel.app/')
+      .then(response => response.json())
+      .then(data => {
+        if (data && data.length > 0) {
+          setUserName(data[0].user);
+        }
+      })
+      .catch(error => console.error('Error fetching user data:', error));
+  }, []);
+
   return (
     <div className="dashboard">
       <div className="sidebar">
@@ -37,6 +49,7 @@ const App = () => {
           <div className="nav-item search"><input type="text" placeholder="Search.........." /></div>
           <div className="nav-item login"><FaSignInAlt /> Log In</div>
           <div className="nav-item signup"><FaUserPlus /> Sign Up</div>
+          <div className="nav-item user-name">{userName}</div>
         </div>
         <div className="carousel-container">
           <Carousel showThumbs={false} autoPlay infiniteLoop>
