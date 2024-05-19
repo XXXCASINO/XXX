@@ -1,11 +1,9 @@
 const express = require("express");
 const serverless = require("serverless-http");
 const app = express();
-const router = express.Router();
+const path = require('path');
 
-router.get("/", (req, res) => {
-    res.send("App is running..");
-});
+// Servindo a pasta design_layout como estática
+app.use('/', express.static(path.join(__dirname, '..', 'design_layout')));
 
-app.use("/.netlify/functions/app", router);
-module.exports.handler = serverless(app);
+exports.handler = serverless(app);
