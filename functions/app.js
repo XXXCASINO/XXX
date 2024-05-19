@@ -1,9 +1,27 @@
+/* const express = require("express");
+const serverless = require("serverless-http");
+const app = express();
+const path = require('path')
+
+app.get('/', (req, res) => {
+    res.send('Hello from the root!');
+});
+
+module.exports.handler = serverless(app); */
+
 const express = require("express");
 const serverless = require("serverless-http");
 const app = express();
-const path = require('path');
+const db = require('./database'); // Import your database module
 
-// Servindo a pasta design_layout como estática
-app.use('/', express.static('design_layout'));
+app.get('/', (req, res) => {
+    db.getData('SELECT * FROM databasexxx.users', (err, results) => {
+        if (err) {
+            res.status(500).send('Database error');
+            return;
+        }
+        res.send(results);
+    });
+});
 
-exports.handler = serverless(app);
+module.exports.handler = serverless(app);
