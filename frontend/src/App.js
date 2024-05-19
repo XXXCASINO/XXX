@@ -49,7 +49,7 @@ const App = () => {
           <div className="nav-item search"><input type="text" placeholder="Search.........." /></div>
           <div className="nav-item login"><FaSignInAlt /> Log In</div>
           <div className="nav-item signup"><FaUserPlus /> Sign Up</div>
-          <div className="nav-item user-name">{userName}</div>
+          <div className="nav-item signup">{userName}</div>
         </div>
         <div className="carousel-container">
           <Carousel showThumbs={false} autoPlay infiniteLoop>
