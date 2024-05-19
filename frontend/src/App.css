@@ -1,38 +1,286 @@
-.App {
-  text-align: center;
+/* src/Dashboard.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Malgun Gothic', sans-serif;
+  background-color: #000;
+  color: #fff;
+  font-size: 80%; /* Decrease font size by 20% */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dashboard {
+  display: flex;
+  height: 100vh;
+  color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sidebar {
+  width: 250px;
+  background-color: #121212;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.sidebar:hover {
+  overflow-y: auto; /* Only show scrollbar on hover */
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: silver;
+  border-radius: 10px;
+}
+
+.logo {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: left; /* Align text to the left */
+}
+
+.menu {
+  flex-grow: 1;
+}
+
+.menu-item, .submenu-item {
+  padding: 10px 15px; /* Add padding inside the text and menu borders */
+  cursor: pointer;
+  text-align: left; /* Align text to the left */
+  border-radius: 5px; /* Slightly rounded corners */
+}
+
+.menu-item:hover, .submenu-item:hover {
+  background-color: #e94560; /* Same red as Log In button */
+  color: #000; /* Text turns black on hover */
+}
+
+.menu-item, .submenu-item {
+  color: #fff; /* Text turns white when not hovered */
+}
+
+.submenu {
+  padding-left: 10px;
+}
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.main-content::-webkit-scrollbar {
+  width: 5px;
+}
+
+.main-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+  background-color: silver;
+  border-radius: 10px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px; /* Add space between the navbar and the main content */
+}
+
+.nav-item {
+  padding: 0 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+  color: #e94560; /* Hover color same as Log In button */
+}
+
+.nav-item input {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.nav-item input::placeholder {
+  color: #ccc;
+}
+
+.login, .signup {
+  background-color: #e94560;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.login:hover, .signup:hover {
+  background-color: #ff5773;
+}
+
+.carousel-container {
+  margin-bottom: 20px; /* Add space between carousel and top games */
+}
+
+.promotion-banner {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
+  background: linear-gradient(90deg, #1e1e1e 0%, #333 100%);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.promotion-banner h2 {
+  margin: 0;
+}
+
+.promotion-banner p {
+  margin: 10px 0;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #e94560;
+}
+
+.btn-secondary {
+  background-color: #444;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+  background-color: #ff5773;
+}
+
+.top-games {
+  margin-top: 20px;
+}
+
+.top-games h2 {
+  margin: 0 0 10px;
+}
+
+.game-cards {
+  display: flex;
+  gap: 10px;
+}
+
+.game-card {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.right-sidebar {
+  width: 300px;
+  background-color: #121212;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  overflow-y: hidden;
+}
+
+.right-sidebar:hover {
+  overflow-y: auto; /* Only show scrollbar on hover */
+}
+
+.right-sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.right-sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.right-sidebar::-webkit-scrollbar-thumb {
+  background-color: silver;
+  border-radius: 10px;
+}
+
+.notifications {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.notifications::-webkit-scrollbar {
+  width: 5px;
+}
+
+.notifications::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.notifications::-webkit-scrollbar-thumb {
+  background-color: silver;
+  border-radius: 10px;
+}
+
+.notification {
+  background-color: #333;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.chat-box {
+  display: flex;
+  align-items: center;
+}
+
+.chat-box input {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  background-color: #444;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.chat-box input::placeholder {
+  color: #ccc;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.chat-box .btn-send {
+  background-color: #e94560;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.chat-box .btn-send:hover {
+  background-color: #ff5773;
 }
